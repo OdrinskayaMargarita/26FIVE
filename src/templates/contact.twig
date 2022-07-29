@@ -1,0 +1,15 @@
+---
+title: Contact
+description: Template
+pageName: contactPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+    <main>
+        {% include "pages/contact/_contact-form.twig" %}
+        {% include "pages/contact/_contact-from.twig" %}
+        {% include "blocks/_newsletter.twig" %}
+    </main>
+    {% include "blocks/_footer-mini.twig" %}
+{% endblock %}

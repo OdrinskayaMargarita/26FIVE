@@ -1,0 +1,59 @@
+.privacy {
+  padding-top: 135px;
+  border-bottom: 1px solid $c-main;
+  padding-bottom: 140px;
+
+  @include tablet {
+    padding-bottom: 100px;
+    padding-top: 105px;
+  }
+
+  @include mobile-up {
+    padding-bottom: 70px;
+  }
+
+  .text-wrapper {
+    max-width: 66%;
+    margin: 0 auto;
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 34px;
+    }
+
+    h4 {
+      margin-bottom: 10px;
+      margin-top: 50px;
+    }
+
+    h5 {
+      @extend %font-22;
+      font-weight: 400;
+      margin-top: 50px;
+      margin-bottom: 10px;
+    }
+
+    h6 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 30px;
+      @extend %font-16;
+      line-height: 140%;
+
+      @include mobile-up {
+        font-size: 18px;
+        line-height: 155%;
+      }
+    }
+
+    .text-right {
+      margin-left: 40px;
+    }
+  }
+}

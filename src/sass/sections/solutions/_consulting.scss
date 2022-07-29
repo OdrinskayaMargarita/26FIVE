@@ -1,0 +1,128 @@
+.solution-consulting {
+  padding: 215px 0 68px;
+
+  @include mobile-up {
+    padding-top: 115px;
+  }
+
+  &__wrapper {
+    padding: 0 180px;
+
+    @include tablet {
+      padding: 0;
+    }
+  }
+
+  &__top {
+    padding-bottom: 260px;
+
+    @include mobile{
+      padding-bottom: 360px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 75px;
+
+      @include mobile-up {
+        text-align: left;
+        margin-bottom: 40px;
+      }
+    }
+
+    h3 {
+      font-weight: 300;
+      letter-spacing: 0.32px;
+      line-height: 140%;
+      margin-bottom: 35px;
+      text-align: center;
+
+      @include mobile-up {
+        text-align: left;
+        margin-bottom: 25px;
+        font-size: 34px;
+        letter-spacing: 0.34px;
+        line-height: 130%;
+      }
+    }
+
+    p {
+      @extend %font-18;
+      letter-spacing: 0.09px;
+      line-height: 140%;
+      text-align: center;
+
+      @include mobile-up {
+        text-align: left;
+      }
+    }
+  }
+
+  .work-one__dropdown {
+    &__title {
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      @include mobile-up{
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      h4 {
+        margin-bottom: 0;
+
+        @include mobile-up{
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 0.18px;
+          line-height: 145%;
+        }
+      }
+    }
+
+    &__inner {
+      &--wrapper {
+        margin-top: -10px;
+        padding-bottom: 45px;
+
+        p {
+          max-width: 100%;
+          margin-bottom: 10px;
+        }
+
+        ul, ol {
+          display: grid;
+          grid-template-columns: repeat(2, 45%);
+          justify-content: space-between;
+          padding-left: 20px;
+          margin-bottom: 10px;
+
+          @include mobile {
+            grid-template-columns: 100%;
+          }
+        }
+
+        ul {
+          list-style: disc;
+        }
+
+        ol {
+          list-style: decimal;
+        }
+
+        li {
+          @extend %font-16;
+          line-height: 140%;
+          margin-bottom: 20px;
+          padding-left: 5px;
+
+          @include mobile-up{
+            font-size: 18px;
+            line-height: 155%;
+          }
+        }
+      }
+    }
+  }
+
+}

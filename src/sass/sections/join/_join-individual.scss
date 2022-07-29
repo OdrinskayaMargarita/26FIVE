@@ -1,0 +1,120 @@
+.join-indiv {
+  padding: 150px 0 100px;
+
+  @include tablet {
+    padding-top: 125px;
+  }
+
+  @include mobile {
+    padding-top: 100px;
+  }
+
+  &__wrapper {
+    padding: 0 184px;
+    position: relative;
+
+    @include tablet {
+      padding: 0 25px;
+    }
+
+    @include mobile {
+      padding: 0;
+    }
+
+    .button-back {
+      position: absolute;
+      left: 0;
+      top: 20px;
+      @extend %font-15;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      line-height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      @include tablet {
+        position: relative;
+        margin-bottom: 50px;
+      }
+
+      span {
+        transition: transform 500ms ease-out;
+        display: block;
+        margin-left: 5px;
+      }
+
+      &:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $c-main;
+        content: '';
+        transition: width 500ms ease-out;
+      }
+
+      &:hover {
+        span {
+          transform: skewX(-15deg);
+        }
+
+        &:before {
+          width: 30%;
+        }
+      }
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    h5 {
+      @extend %font-18;
+      font-weight: 400;
+      letter-spacing: 0.09px;
+      line-height: 28px;
+      margin-bottom: 50px;
+      @include mobile-up{
+        margin-bottom: 60px;
+      }
+    }
+
+    h4 {
+      margin-bottom: 15px;
+      margin-top: 45px;
+      @include mobile-up{
+        font-weight: 700;
+        font-size: 18px;
+        margin-top: 60px;
+      }
+    }
+
+    p {
+      @extend %font-16;
+      line-height: 140%;
+      margin-bottom: 15px;
+    }
+
+    ul, ol {
+      margin-bottom: 50px;
+      padding-left: 20px;
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    li {
+      @extend %font-16;
+      line-height: 140%;
+      margin-bottom: 15px;
+      padding-left: 5px;
+    }
+  }
+}

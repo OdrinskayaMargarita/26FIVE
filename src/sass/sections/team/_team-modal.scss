@@ -1,0 +1,175 @@
+.team-modal {
+  height: calc(100vh - 100px);
+  position: fixed;
+  top: 100px;
+  width: 100%;
+  opacity: 0;
+  z-index: -1;
+
+  @include mobile-up {
+    height: calc(100vh - 70px);
+    top: 70px;
+  }
+
+  &__close {
+    background-color: $c-white;
+    position: absolute;
+    top: 30px;
+    right: 144px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    z-index: 50;
+
+
+    @media (max-width: $xl) {
+      right: 60px;
+    }
+
+    @media (max-width: $md) {
+      right: 45px;
+    }
+
+    @media (max-width: $sm) {
+      right: 30px;
+    }
+
+    @include tablet{
+      background-color: none;
+    }
+
+    span {
+      height: 2px;
+      display: block;
+      width: 28px;
+      background-color: #181818;
+      margin-right: 0;
+      margin-left: auto;
+      -webkit-transition: 500ms ease-out;
+      -o-transition: 500ms ease-out;
+      transition: 500ms ease-out;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 20px;
+      left: 6px;
+
+      &:last-of-type {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &--open {
+    z-index: 50;
+    opacity: 1;
+
+    .team-modal__description {
+      opacity: 1;
+    }
+  }
+
+
+  &__inner {
+    @include tablet {
+      overflow-y: auto;
+    }
+  }
+
+  &__wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+
+    @include tablet {
+      display: block;
+      overflow-y: auto;
+    }
+  }
+
+  &__img {
+    position: relative;
+    padding-bottom: 95%;
+
+    .employee__image--modal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 0;
+      height: 0;
+      transition: 1000ms ease-out;
+
+      &.img-scale {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__description {
+    background-color: $c-white;
+    padding: 80px 144px 80px 100px;
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    @include tablet {
+      padding: 57px 30px;
+      overflow-y: hidden;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    p.team-modal__description--employee {
+      margin-bottom: 45px;
+      @extend %font-14;
+      letter-spacing: 1.4px;
+      line-height: 143%;
+      text-transform: uppercase;
+    }
+
+    p {
+      @extend %font-18;
+      letter-spacing: 0.09px;
+      line-height: 156%;
+      margin-bottom: 20px;
+    }
+
+    &--mail {
+      display: inline-block;
+      margin-top: 80px;
+      margin-bottom: 20px;
+    }
+
+    &--social {
+      a {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        margin-right: 10px;
+
+        .icon_facebook {
+          height: 20px;
+        }
+
+        .icon_instagram {
+          width: 22px;
+          height: 22px;
+        }
+
+        .icon_twitter {
+          width: 22px;
+          height: 22px;
+        }
+
+        .icon_linkedin {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

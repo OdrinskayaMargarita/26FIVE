@@ -1,0 +1,15 @@
+---
+title: Work
+description: Template
+pageName: workPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+    <main>
+        {% include "pages/work/_work-filter.twig" %}
+        {% include "pages/work/_work-catalog.twig" %}
+        {% include "blocks/_talk-with-us.twig" %}
+    </main>
+    {% include "blocks/_footer.twig" %}
+{% endblock %}

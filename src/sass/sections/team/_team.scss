@@ -1,0 +1,68 @@
+.work {
+  padding-top: 140px;
+  padding-bottom: 40px;
+
+  h2 {
+    margin-bottom: 100px;
+
+    @include mobile-up {
+      margin-bottom: 40px;
+    }
+  }
+
+  .team {
+    display: grid;
+    grid-template-columns: repeat(4, 23.2%);
+    justify-content: space-between;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 31%);
+    }
+    @include mobile {
+      grid-template-columns: repeat(2, 48%);
+    }
+
+    .employee {
+      margin-bottom: 60px;
+
+      @include mobile-up {
+        margin-bottom: 40px;
+      }
+
+      &__image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: 116%;
+        margin-bottom: 24px;
+        @include mobile {
+          padding-bottom: 118%;
+          margin-bottom: 14px;
+        }
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__name {
+        @extend %font-22;
+        line-height: 24px;
+        margin-bottom: 5px;
+
+        @include mobile-up {
+          font-size: 18px;
+        }
+      }
+
+      &__position {
+        @extend %font-14;
+        letter-spacing: 1.4px;
+        line-height: 140%;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

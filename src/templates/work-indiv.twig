@@ -1,0 +1,16 @@
+---
+title: WorkIndividual
+description: Template
+pageName: workPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+    <main>
+        {% include "pages/work/_work-modal.twig" %}
+        {% include "pages/work/_work-one.twig" %}
+        {% include "pages/work/_work-related.twig" %}
+        {% include "blocks/_talk-with-us.twig" %}
+    </main>
+    {% include "blocks/_footer.twig" %}
+{% endblock %}

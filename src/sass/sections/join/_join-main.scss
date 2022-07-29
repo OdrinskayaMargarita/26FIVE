@@ -1,0 +1,150 @@
+.join {
+  padding: 150px 0 70px;
+
+  &__wrapper {
+    max-width: 49%;
+    margin: 0 auto;
+
+    @include tablet {
+      max-width: 70%;
+    }
+
+    @include mobile-up {
+      max-width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 56px;
+      font-weight: 300;
+      @include mobile-up {
+        margin-bottom: 30px;
+        text-align: left;
+        letter-spacing: 0.34px;
+        line-height: 130%;
+      }
+    }
+
+    p {
+      @extend %font-16;
+      line-height: 140%;
+
+      @include tablet {
+        max-width: 100%;
+      }
+
+      @include mobile-up{
+        font-size: 18px;
+        line-height: 155%;
+      }
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__table {
+    margin: 0 auto 60px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    &__row {
+      display: grid;
+      grid-template-columns: 60% 35%;
+      justify-content: space-between;
+      border-bottom: 1px solid $c-main;
+      padding: 19px 0;
+
+      @include mobile-up {
+        grid-template-columns: 49% 49%;
+      }
+
+      p {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        line-height: 150%;
+        @include mobile-up {
+          font-size: 18px;
+          letter-spacing: 0.09px;
+          line-height: 155%;
+        }
+      }
+
+      &--title {
+        padding: 0;
+
+        .join__table__row__location {
+          @include mobile-up {
+            padding-right: 0;
+          }
+        }
+
+        .style-select {
+          &.open {
+            .ss-selected-option {
+              text-shadow: none;
+
+              &:after{
+                transform: rotate(180deg);
+              }
+            }
+          }
+
+          .ss-selected-option {
+            text-align: left;
+            justify-content: flex-start;
+            font-weight: 700;
+            @extend %font-14;
+            letter-spacing: 1.4px;
+            line-height: 250%;
+            position: relative;
+            padding-left: 0;
+
+            &:after {
+              content: '';
+              margin-left: 32px;
+              background: url("../img/arrow-select.png") no-repeat;
+              width: 10px;
+              height: 8px;
+              transition: transform 500ms ease-out;
+              @include mobile-up {
+                margin-left: 15px;
+              }
+            }
+
+            &:hover {
+              text-shadow: none;
+            }
+          }
+
+          .ss-dropdown {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            font-size: 18px;
+            @include mobile-up {
+              min-width: initial;
+            }
+
+            .ss-option {
+              font-size: 18px;
+              line-height: 150%;
+              letter-spacing: 0.18px;
+            }
+          }
+        }
+      }
+
+      &__location {
+        padding-right: 25px;
+      }
+    }
+  }
+}

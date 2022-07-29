@@ -1,0 +1,48 @@
+.insta {
+  padding: 100px 0;
+
+  @include mobile-up{
+    padding-top: 62px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 45px;
+    @include mobile-up{
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  }
+
+  .swiper-container {
+    padding-left: 144px;
+    @media (max-width: $xl) {
+      padding-left: 60px;
+    }
+
+    @media (max-width: $md) {
+      padding-left: 45px;
+    }
+
+    @media (max-width: $sm) {
+      padding: 0 30px;
+    }
+
+    .swiper-slide {
+      a{
+        width: 100%;
+        display: block;
+        padding-bottom: 100%;
+        overflow: hidden;
+        img{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+}

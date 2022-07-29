@@ -1,0 +1,100 @@
+.button {
+  position: relative;
+  padding: 15px 27px;
+
+  span {
+    position: relative;
+    z-index: 1;
+    transition: color 600ms ease-out;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 147%;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  &:before {
+    height: 100%;
+    width: 0;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    transition: width 500ms ease-in;
+  }
+
+  @include up-desktop {
+    font-size: 1.1vw;
+  }
+
+  &__white {
+    border: 1px solid $c-black;
+
+    &:before {
+      background-color: $c-main;
+    }
+
+    &:hover {
+      span {
+        color: $c-white;
+      }
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  &__black {
+    border: 1px solid $c-white;
+
+    &:before {
+      background-color: $c-white;
+    }
+
+    &:hover {
+      span {
+        color: $c-main;
+      }
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+
+.link {
+  padding: 10px;
+  padding-left: 0;
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 148%;
+  text-transform: uppercase;
+  transition: transform, text-shadow 500ms ease-out;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 10px);
+    background-color: $c-main;
+    height: 1px;
+    left: 0;
+    bottom: 9px;
+    transition: width 500ms ease-out;
+  }
+
+  &:hover {
+    transform: skewX(-15deg);
+    text-shadow: 1px 0 0 $c-main;
+
+    &:before {
+      width: 20%;
+    }
+  }
+}

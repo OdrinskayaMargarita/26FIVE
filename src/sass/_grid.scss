@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 144px;
+  position: relative;
+  height: 100%;
+
+  @media (max-width: $xl) {
+    padding: 0 60px;
+  }
+
+  @media (max-width: $md) {
+    padding: 0 45px;
+  }
+
+  @media (max-width: $sm) {
+    padding: 0 30px;
+  }
+}

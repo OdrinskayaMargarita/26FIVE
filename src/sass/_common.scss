@@ -1,0 +1,118 @@
+html, body {
+  font-family: $font-1;
+  font-weight: 400;
+  color: $c-main;
+  background-color: $c-white;
+
+  * {
+    cursor: none !important;
+    scrollbar-color: $c-main transparent;
+    scrollbar-width: thin;
+    @include target-edge {
+      cursor: auto !important;
+    }
+    @include target-ie11 {
+      cursor: auto !important;
+    }
+  }
+
+  &.no-scroll{
+    overflow-y: hidden;
+  }
+}
+
+a{
+  display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+button, a, [class*=button], [class*=btn], [class*=link] {
+  cursor: pointer;
+}
+
+.title {
+  font-size: rem-calc(32);
+  font-weight: 500;
+  line-height: 1.2em;
+  margin-bottom: 1.05em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.text-container {
+  font-weight: 300;
+  line-height: 1.45em;
+  letter-spacing: 0;
+}
+
+p, ul, ol {
+  @extend %font-18;
+
+  @include up-desktop{
+    font-size: 1.3vw;
+  }
+}
+
+.text{
+  p {
+    margin-bottom: 40px;
+    @extend %font-16;
+    line-height: 160%;
+  }
+
+  h6{
+    @extend %font-18;
+    font-weight: 700;
+    letter-spacing: 0.18px;
+    line-height: 140%;
+    margin-top: 45px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  ul{
+    padding-left: 20px;
+    margin-bottom: 40px;
+    li{
+      @extend %font-16;
+      line-height: 160%;
+      margin-bottom: 15px;
+      list-style: disc;
+    }
+  }
+
+  ol{
+    padding-left: 20px;
+    li{
+      @extend %font-16;
+      line-height: 160%;
+      margin-bottom: 15px;
+      list-style: decimal;
+    }
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #868686;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $c-white;
+}
+
+svg.icon-arrow1{
+  fill: none;
+  stroke: $c-main;
+  stroke-width: 2px;
+}

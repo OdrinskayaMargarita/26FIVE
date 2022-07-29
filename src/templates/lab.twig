@@ -1,0 +1,14 @@
+---
+title: Lab
+description: Template
+pageName: labPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+    <main>
+        {% include "pages/lab/_lab.twig" %}
+        {% include "blocks/_newsletter.twig" %}
+    </main>
+    {% include "blocks/_footer-mini.twig" %}
+{% endblock %}

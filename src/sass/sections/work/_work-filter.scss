@@ -1,0 +1,79 @@
+.work-filter {
+  padding-top: 135px;
+
+  h2 {
+    max-width: 70%;
+    margin-bottom: 100px;
+
+    @include mobile {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__all {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    border-bottom: 1px solid #707070;
+    margin-bottom: 60px;
+
+    @include mobile-up {
+      justify-content: space-between;
+    }
+
+    li {
+      text-transform: uppercase;
+      color: $c-main;
+
+      &:first-of-type {
+        margin-right: 40px;
+
+        @include mobile-up {
+          margin-right: 10px;
+        }
+      }
+
+      a {
+        padding: 10px 6px;
+        @extend %font-14;
+        @include mobile-up {
+          font-size: 14px;
+        }
+
+        &.active {
+          font-weight: bold;
+        }
+      }
+
+      .style-select {
+        .ss {
+          &-selected-option {
+            @extend %font-14;
+            letter-spacing: 1.4px;
+            @include mobile-up {
+              font-size: 14px;
+            }
+          }
+
+          &-dropdown {
+            top: 100%;
+            padding: 45px 0 20px 0;
+            @include mobile{
+              min-width: initial;
+              max-width: initial;
+            }
+          }
+
+          &-option {
+            text-transform: uppercase;
+            max-width: 60%;
+            width: 100%;
+            margin: 0 auto 10px;
+            @extend %font-14;
+          }
+        }
+      }
+    }
+  }
+}

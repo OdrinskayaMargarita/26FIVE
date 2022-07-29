@@ -1,0 +1,15 @@
+---
+title: Team
+description: Template
+pageName: teamPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+    <main>
+        {% include "pages/team/_team-modal.twig" %}
+        {% include "pages/team/_team.twig" %}
+        {% include "blocks/_talk-with-us.twig" %}
+    </main>
+    {% include "blocks/_footer.twig" %}
+{% endblock %}

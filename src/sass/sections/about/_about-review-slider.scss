@@ -1,0 +1,82 @@
+.review-slider {
+  text-align: center;
+  padding: 100px 0;
+
+  @include mobile-up{
+    text-align: left;
+  }
+
+  .review-wrapper {
+    img {
+      margin-bottom: 40px;
+    }
+  }
+
+  .swiper-container {
+    padding-bottom: 60px;
+    @include mobile-up{
+      padding-bottom: 90px;
+    }
+
+    .swiper-slide {
+      h3 {
+        margin-bottom: 45px;
+
+        @include mobile-up{
+          font-size: 34px;
+          margin-bottom: 40px;
+          line-height: 130%;
+        }
+      }
+
+      .review-slider {
+        &__name {
+          @extend %font-22;
+          letter-spacing: 0.22px;
+          line-height: 120%;
+          margin-bottom: 9px;
+        }
+
+        &__company {
+          @extend %font-14;
+          letter-spacing: 1.4px;
+          line-height: 140%;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .swiper-pagination {
+      bottom: 10px;
+
+      @include mobile-up{
+        text-align: left;
+      }
+
+      &-bullet {
+        background-color: $c-white;
+        margin: 0 8px !important;
+        width: 10px;
+        height: 10px;
+
+        &::after {
+          position: static;
+          transform: rotate(45deg);
+          width: 7px;
+          height: 7px;
+          background-color: rgba(0, 0, 0, 0.5);
+          transition: 500ms ease-in;
+        }
+
+        &-active {
+          background-color: $c-white;
+
+          &::after {
+            background-color: $c-main;
+            transform: rotate(135deg) scale(1.7);
+          }
+        }
+      }
+    }
+  }
+}

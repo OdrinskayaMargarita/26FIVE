@@ -1,0 +1,15 @@
+---
+title: LabSingle
+description: Template
+pageName: labSinglePage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+    <main>
+        {% include "pages/lab/_lab-ind.twig" %}
+        {% include "pages/lab/_related-articles.twig" %}
+        {% include "blocks/_newsletter.twig" %}
+    </main>
+    {% include "blocks/_footer-mini.twig" %}
+{% endblock %}

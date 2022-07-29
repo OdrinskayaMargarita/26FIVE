@@ -1,0 +1,18 @@
+---
+title: Home
+description: Template
+pageName: homePage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+  <main>
+    {% include "pages/homepage/_hero.twig" %}
+    {% include "pages/homepage/_home-desciption.twig" %}
+    {% include "pages/homepage/_consulting.twig" %}
+    {% include "pages/homepage/_innovation-lab.twig" %}
+    {% include "pages/homepage/_projects-news.twig" %}
+    {% include "blocks/_talk-with-us.twig" %}
+  </main>
+  {% include "blocks/_footer.twig" %}
+{% endblock %}

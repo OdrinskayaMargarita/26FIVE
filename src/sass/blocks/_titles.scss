@@ -1,0 +1,67 @@
+h1{
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 118%;
+
+  @include tablet-plus{
+    font-size: 60px;
+  }
+
+  @include mobile-up{
+    font-size: 52px;
+  }
+
+  @include up-desktop{
+    font-size: 5vw;
+  }
+}
+
+h2{
+  font-size: 46px;
+  font-weight: 300;
+  line-height: 117%;
+
+
+  @include tablet-plus{
+    font-size: 40px;
+  }
+
+  @include mobile-up{
+    font-size: 34px;
+  }
+
+  @include up-desktop{
+    font-size: 3.37vw;
+  }
+}
+
+h3{
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 0.32px;
+  line-height: 138%;
+
+  @include mobile-up{
+    font-size: 24px;
+  }
+
+  @include up-desktop{
+    font-size: 2.3vw;
+  }
+}
+
+h4{
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.24px;
+  line-height: 110%;
+
+  @include mobile-up{
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  @include up-desktop{
+    font-size: 1.8vw;
+  }
+}

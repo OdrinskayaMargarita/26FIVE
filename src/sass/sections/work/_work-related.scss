@@ -1,0 +1,52 @@
+.work-related {
+  padding: 60px 0 40px;
+  background-color: #f0f0f0;
+
+  @include mobile-up {
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    @include mobile-up {
+      margin-bottom: 10px;
+    }
+  }
+
+  .work-catalog {
+    &__wrapper {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: repeat(4, 23.2%);
+
+      @include mobile {
+        grid-template-columns: repeat(1, 100%);
+        margin-top: 30px;
+      }
+    }
+
+    &__item {
+
+      &__client {
+        margin-bottom: 7px;
+      }
+
+      &__img {
+        padding-bottom: 136%;
+        margin-bottom: 32px;
+        @include mobile-up {
+          margin-bottom: 20px;
+        }
+      }
+
+      &__title {
+        display: -webkit-box;
+        white-space: initial;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,46 @@
+---
+title: ALL
+description: Template
+pageName: ALLPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+    <main>
+        <ul>
+            <li><a href="index.html"><b>HOME</b></a></li>
+            <li><a href="lab.html"><b>LAB</b></a></li>
+            <li><a href="team.html"><b>TEAM</b></a></li>
+            <li><a href="lab-individual.html"><b>LAB INDIVIDUAL</b></a></li>
+            <li><a href="work.html"><b>WORK</b></a></li>
+            <li><a href="work-indiv.html"><b>WORK SINGLE</b></a></li>
+            <li><a href="404.html"><b>404</b></a></li>
+            <li><a href="contact.html"><b>CONTACT</b></a></li>
+            <li><a href="about.html"><b>ABOUT</b></a></li>
+            <li><a href="join-individual.html"><b>JOIN SINGLE</b></a></li>
+            <li><a href="join.html"><b>JOIN</b></a></li>
+            <li><a href="privacy.html"><b>PRIVACY</b></a></li>
+            <li><a href="cookie.html"><b>COOKIE</b></a></li>
+            <li><a href="consulting.html"><b>CONSULTING</b></a></li>
+            <li><a href="solution-main.html"><b>SOLUTION</b></a></li>
+
+        </ul>
+    </main>
+    <style>
+        main{
+          padding-top: 150px;
+        }
+        ul{
+          text-align: center;
+          font-size: 22px;
+        }
+
+        li{
+          margin-bottom: 25px;
+        }
+
+        b{
+          font-weight: 700;
+        }
+    </style>
+{% endblock %}

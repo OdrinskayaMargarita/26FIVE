@@ -1,0 +1,116 @@
+.solution-main {
+  padding: 160px 0 70px;
+  height: 100vh;
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      position: relative;
+      text-align: center;
+
+      &:before {
+        position: absolute;
+        width: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: $c-main;
+        height: 2px;
+        content: '';
+        transition: width 500ms ease-out;
+        bottom: 0;
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__slider {
+    height: 100%;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+
+    span {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid $c-main;
+      background-color: $c-white;
+      display: block;
+      z-index: 2;
+      right: 0;
+      left: 0;
+      margin: auto;
+
+      &:first-of-type {
+        top: 20px;
+      }
+
+      &:last-of-type {
+        bottom: 20px;
+      }
+    }
+
+    #range {
+      border-left: 5px dotted #181818;
+      left: 16px;
+      right: 0;
+      margin: auto;
+      overflow: visible;
+      padding: 0;
+      position: relative;
+      height: 100%;
+      width: 40px;
+    }
+
+    .knob {
+      background-color: #181818;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 50%;
+      line-height: 100px;
+      color: black;
+      position: absolute;
+      left: -21px;
+      z-index: 2;
+      border: 2px solid rgba(0, 0, 0, 0.4);
+
+      &:after,
+      &:before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        content: '';
+        background: url("../img/arrow-range.png") no-repeat;
+        width: 20px;
+        height: 10px;
+        background-size: contain;
+      }
+
+      &:before {
+        top: -20px;
+        left: 5px;
+        transform: rotate(180deg);
+      }
+
+      &:after {
+        bottom: -20px;
+        left: 8px;
+      }
+    }
+  }
+}

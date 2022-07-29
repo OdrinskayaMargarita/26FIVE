@@ -1,0 +1,22 @@
+{% import "mixins/_buttons.twig" as button %}
+
+<!doctype html>
+<html lang="en">
+{% include "./_head.twig" %}
+<body data-page-name="{{ pageName }}" data-barba="wrapper">
+{% include "blocks/_cursor.twig" %}
+{% include "blocks/_page-transition.twig" %}
+{% include "blocks/_header.twig" %}
+
+<div data-barba="container" data-barba-namespace="{{ pageName }}">
+    {% include "blocks/_modal-talk.twig" %}
+    {% include "blocks/_cockie-apply.twig" %}
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+.modal {
+  &-button {
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    z-index: 45;
+    background-color: $c-main;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    justify-content: center;
+
+    @include mobile {
+      right: 20px;
+      border-bottom: 110px;
+      bottom: 80px;
+    }
+
+    img {
+      width: 27px;
+    }
+  }
+
+  &-talk {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: $c-main;
+    padding: 75px 0;
+    z-index: 45;
+    width: 100%;
+    transform: translate(0, 300%);
+    transition: transform 500ms ease-in-out;
+
+    @include mobile-up {
+      height: 100vh;
+      padding: 200px 0 75px;
+    }
+
+    .container {
+      height: 100%;
+    }
+
+    &--open {
+      transform: translate(0, 0%);
+    }
+
+    &__inner {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      height: 100%;
+
+      @include tablet {
+        display: block;
+      }
+
+      @include mobile-up {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      h2 {
+        color: $c-white;
+        margin-bottom: 50px;
+      }
+
+      .form {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: 100%;
+
+        @include mobile-up {
+          flex-wrap: wrap;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          span {
+            color: $c-white;
+            line-height: initial;
+            margin-bottom: -10px;
+            margin-right: 25px;
+            font-size: 68px;
+            font-weight: 700;
+
+            @include tablet-plus{
+              font-size: 60px;
+            }
+
+            @include mobile-up{
+              font-size: 52px;
+            }
+
+            @include up-desktop{
+              font-size: 5vw;
+            }
+          }
+
+          svg.icon_arrow2 {
+            fill: none;
+            stroke: $c-white;
+            stroke-width: 2px;
+            width: 10%;
+            height: 46px;
+          }
+        }
+      }
+    }
+
+    &__close {
+      position: absolute;
+      top: -40px;
+      right: 65px;
+      width: 26px;
+      height: 26px;
+      transition: transform 500ms ease-in;
+
+      &:hover {
+        transform: rotate(180deg);
+      }
+
+      @include mobile-up {
+        top: 0;
+        right: 30px;
+      }
+
+      span {
+        width: 37px;
+        display: block;
+        height: 1px;
+        background-color: $c-white;
+        position: absolute;
+
+        &:first-of-type {
+          transform: rotate(45deg) translate(6px, 13px);
+        }
+
+        &:last-of-type {
+          transform: rotate(-45deg) translate(-14px, 5px);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+//grid
+$xxsm: 374px;
+$xsm: 459px;
+$sm: 600px;
+$md: 767px;
+$lg: 1023px;
+$xl: 1199px;
+$xxl: 1399px;
+$x-big: 1920px;
+
+//fonts
+$font-1: ProximaNova, sans-serif;
+
+//font-size
+%font-14 {
+  font-size: 14px;
+  @media (min-width: 1440px) {
+    font-size: 1vw;
+  }
+}
+
+%font-15 {
+  font-size: 15px;
+  @media (min-width: 1440px) {
+    font-size: 1.1vw;
+  }
+}
+
+%font-16 {
+  font-size: 16px;
+  @media (min-width: 1440px) {
+    font-size: 1.15vw;
+  }
+}
+
+%font-18 {
+  font-size: 18px;
+  @media (min-width: 1440px) {
+    font-size: 1.3vw;
+  }
+}
+
+%font-22 {
+  font-size: 22px;
+  @media (min-width: 1440px) {
+    font-size: 1.5vw;
+  }
+}
+
+
+//colors
+$c-black: #000;
+$c-white: #fff;
+$c-main: #181818;
+$c-grey: #707070;
+$c-grey-light: #f0f0f0;
+$c-error: #ff0099;
+
+// timing
+$time-sm: 300ms;
+$time-md: 500ms;
+$time-lg: 800ms;
+$time-xl: 1100ms;

@@ -1,0 +1,77 @@
+.consulting {
+  padding: 200px 0;
+
+  @include tablet-plus {
+    padding: 100px 0;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 57.4% 33%;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include tablet-plus {
+      grid-template-columns: 50% 45%;
+    }
+    @include mobile-up {
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(2, auto);
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+    }
+
+    @include mobile-up {
+      margin-bottom: 47px;
+    }
+  }
+
+  &__info {
+    h1 {
+      margin-bottom: 18px;
+      @include tablet {
+        font-size: 52px;
+      }
+    }
+
+    p {
+      margin-bottom: 26px;
+      line-height: 155%;
+      max-width: 75%;
+      @extend %font-18;
+
+      @include tablet-plus {
+        max-width: 100%;
+      }
+
+      @include mobile-up {
+        max-width: 85%;
+      }
+    }
+  }
+}
+
+.innovation-lab {
+  .consulting__wrapper {
+    grid-template-columns: 35% 58%;
+    align-items: flex-start;
+    @include tablet-plus {
+      grid-template-columns: 45% 50%;
+    }
+    @include mobile-up {
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(2, auto);
+      .consulting__image {
+        grid-row: 1;
+      }
+
+      .consulting__info {
+        grid-row: 2;
+      }
+    }
+  }
+
+}

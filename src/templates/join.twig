@@ -1,0 +1,15 @@
+---
+title: Join
+description: Template
+pageName: joinPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+    <main>
+        {% include "pages/join/_join-main.twig" %}
+        {% include "pages/join/_join-team.twig" %}
+        {% include "blocks/_newsletter.twig" %}
+    </main>
+    {% include "blocks/_footer-mini.twig" %}
+{% endblock %}

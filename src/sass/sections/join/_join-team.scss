@@ -1,0 +1,150 @@
+.join-team {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+
+    @include tablet {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__description {
+    background-color: #f0f0f0;
+    padding: 50px 80px 50px 144px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+
+    @media (max-width: $xl) {
+      padding-left: 60px;
+    }
+
+    @media (max-width: $md) {
+      padding-left: 45px;
+    }
+
+    @media (max-width: $sm) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    h2 {
+      margin-bottom: 22px;
+      letter-spacing: 0.92px;
+    }
+
+    p {
+      @extend %font-22;
+      letter-spacing: 0.22px;
+      line-height: 120%;
+      margin-bottom: 20px;
+
+      @include mobile-up {
+        font-size: 18px;
+      }
+    }
+
+    a {
+      padding: 3px 3px 3px 0;
+      position: relative;
+      @extend %font-15;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      line-height: 147%;
+      transition: color 500ms ease-out;
+
+      @include mobile-up {
+        position: absolute;
+        top: 55px;
+        right: 30px;
+      }
+
+      &:before {
+        content: '';
+        width: calc(100% - 3px);
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: background-color 500ms ease-out;
+        background-color: $c-main;
+      }
+
+      &:hover {
+        color: #868686;
+
+        &:before {
+          background-color: #868686;
+        }
+      }
+    }
+  }
+
+  &__slider {
+    .swiper {
+      &-slide {
+        &__img {
+          position: relative;
+          padding-bottom: 73.21%;
+
+          img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+
+      &-button {
+        background-image: none;
+        background-color: rgba(0, 0, 0, 0.28);
+        padding: 80px 40px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+
+        &:hover {
+          .icon_arrow-left {
+            transform: scale(1.2);
+          }
+          .icon_arrow-right {
+            transform: rotate(180deg) scale(1.2);
+          }
+        }
+
+        &-prev {
+          left: 0;
+        }
+
+        &-next {
+          right: 0;
+        }
+
+        .icon {
+          stroke: $c-white;
+          fill: none;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+          margin: auto;
+          width: 94%;
+          height: 56%;
+          transition: transform 500ms ease-in;
+          stroke-width: 2px;
+        }
+
+        .icon_arrow-right {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

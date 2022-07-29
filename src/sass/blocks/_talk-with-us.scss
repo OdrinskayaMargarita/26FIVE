@@ -1,0 +1,73 @@
+.talk {
+  background-color: $c-main;
+  padding: 140px 0;
+  text-align: center;
+  color: $c-white;
+
+  @include mobile {
+    text-align: left;
+    padding: 110px 0 30px;
+  }
+
+  &__description {
+    margin-bottom: 35px;
+    @include mobile-up {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      h1 {
+        transform: skewX(-15deg);
+      }
+
+      span {
+        &:before {
+          width: 120px;
+        }
+      }
+    }
+
+    h1 {
+      margin-right: 25px;
+    }
+
+    span {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      &:before {
+        content: '';
+        position: relative;
+        top: 0;
+        bottom: 0;
+        right: -10px;
+        height: 2px;
+        background-color: $c-white;
+        width: 10px;
+        display: block;
+        margin: auto;
+        transition: width 500ms ease-out;
+      }
+
+      svg.icon_arrow-2 {
+        fill: none;
+        width: 50px;
+        height: 30px;
+        stroke-width: 2px;
+        stroke: $c-white;
+
+        @include mobile-up {
+          width: 47px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.contact-form {
+  padding-top: 100px;
+  background-color: $c-main;
+
+  .modal-talk {
+    &--contact {
+      position: static;
+      transform: none;
+      padding-bottom: 117px;
+
+      @include mobile-up {
+        height: auto;
+        padding-top: 18px;
+        padding-bottom: 63px;
+      }
+    }
+
+    &__inner {
+
+      h2 {
+        @include mobile-up {
+          font-size: 30px;
+        }
+      }
+
+      .form {
+        &__inner {
+          max-width: 340px;
+          width: 100%;
+        }
+
+        &-theme{
+          &__item{
+            width: 100%;
+          }
+        }
+
+        button {
+          margin-top: 60px;
+          display: inline-flex;
+
+          span {
+            text-transform: uppercase;
+            @include mobile-up {
+              text-transform: capitalize;
+            }
+          }
+
+          svg.icon_arrow2 {
+            fill: none;
+            stroke: $c-white;
+
+            @include mobile-up {
+              width: 47px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
